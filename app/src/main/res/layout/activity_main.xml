@@ -41,12 +41,12 @@
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/image_button_background"
                     android:contentDescription="@string/profile"
+                    app:toolTipTextCompat="@{@string/profile}"
                     android:src="@drawable/profile"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/ib_new"
                     app:layout_constraintTop_toTopOf="parent"
                     app:selected="@{true}" />
-<!--                Todo: add tooltip to all buttons-->
 
                 <ImageButton
                     android:id="@+id/ib_new"
@@ -55,6 +55,7 @@
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/image_button_background"
                     android:contentDescription="@string/new_"
+                    app:toolTipTextCompat="@{@string/new_}"
                     android:src="@drawable/plus"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/ib_nav_menu"
@@ -67,6 +68,7 @@
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/image_button_background"
                     android:contentDescription="@string/open_side_navigation"
+                    app:toolTipTextCompat="@{@string/open_side_navigation}"
                     android:src="@drawable/bars"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
