@@ -1,6 +1,7 @@
 package com.example.photos.util
 
 import android.app.Activity
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.annotation.LayoutRes
@@ -17,6 +18,10 @@ fun <T: ViewDataBinding> Activity.bind(@LayoutRes layout: Int): T {
 
 fun <T: ViewDataBinding> Fragment.bind(@LayoutRes layout: Int, parent: ViewGroup?): T {
     return DataBindingUtil.inflate(this.layoutInflater, layout, parent, false)
+}
+
+fun <T: ViewDataBinding> bind(@LayoutRes layout: Int, parent: ViewGroup?): T {
+    return DataBindingUtil.inflate(LayoutInflater.from(parent?.context), layout, parent, false)
 }
 
 @BindingAdapter("toolTipTextCompat")
