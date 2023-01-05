@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Photos</string>
     <string name="logo">Logo</string>
+    <string name="open_side_navigation">Open side navigation</string>
+    <string name="profile">Profile</string>
+    <string name="new_">New</string>
 </resources>

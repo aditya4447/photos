@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape android:shape="oval" android:tint="@color/selectedButtonBackground" />
+            </item>
+            <item android:state_selected="false">
+                <shape android:shape="oval" android:tint="?android:attr/windowBackground" />
+            </item>
+        </selector>
+    </item>
+</ripple>
