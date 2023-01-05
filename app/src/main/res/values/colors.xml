@@ -10,4 +10,9 @@
     <color name="colorOnBackground">@color/black</color>
     <color name="selectedButtonBackground">#D90034</color>
     <color name="image_button_action_color">#597DDF</color>
+    <color name="sample_1">#571845</color>
+    <color name="sample_2">#900C3E</color>
+    <color name="sample_3">#C70039</color>
+    <color name="sample_4">#FF5733</color>
+    <color name="sample_5">#FFC300</color>
 </resources>
