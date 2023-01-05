@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorOnBackground">@color/white</color>
+    <color name="colorOnBackgroundHalf">@color/white_half</color>
     <color name="selectedButtonBackground">#D90034</color>
 </resources>

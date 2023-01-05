@@ -6,8 +6,11 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="black_half">#70000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_half">#70FFFFFF</color>
     <color name="colorOnBackground">@color/black</color>
+    <color name="colorOnBackgroundHalf">@color/black_half</color>
     <color name="selectedButtonBackground">#D90034</color>
     <color name="image_button_action_color">#597DDF</color>
     <color name="sample_1">#571845</color>
@@ -15,4 +18,5 @@
     <color name="sample_3">#C70039</color>
     <color name="sample_4">#FF5733</color>
     <color name="sample_5">#FFC300</color>
+    <color name="large_button_bar">#FFB500</color>
 </resources>

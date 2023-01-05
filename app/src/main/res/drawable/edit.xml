@@ -5,7 +5,7 @@
     android:viewportHeight="27">
   <path
       android:pathData="M11.191,19.497L11.623,16.764L22.574,2.455C22.903,2.078 23.214,1.879 23.474,1.879C23.586,1.879 23.725,1.879 23.865,1.967L24.823,2.653C25.107,2.883 25.042,3.438 24.673,3.942L13.659,18.37L11.191,19.497ZM10,21L14.291,19.013L25.468,4.413C25.873,3.922 26.06,3.334 25.983,2.802C25.927,2.417 25.738,2.102 25.437,1.893L24.409,1.257C24.161,1.082 23.845,1 23.414,1L23.396,1.001C22.854,1.059 22.322,1.387 21.898,1.926L10.779,16.414L10,21Z"
-      android:fillColor="@color/image_button_color"
+      android:fillColor="@color/colorOnBackground"
       android:fillType="evenOdd"/>
   <group>
     <clip-path
@@ -13,7 +13,7 @@
         android:fillType="evenOdd"/>
     <path
         android:pathData="M26.112,8.152V24.017C26.112,25.144 25.195,26.061 24.069,26.061H2.925C1.798,26.061 0.882,25.144 0.882,24.017V2.931C0.882,1.805 1.798,0.888 2.925,0.888H18.964V0.006H2.925C1.312,0.006 -0,1.318 -0,2.931V24.075C-0,25.688 1.312,27 2.925,27H24.069C25.681,27 26.994,25.688 26.994,24.075V8.152H26.112Z"
-        android:fillColor="@color/image_button_color"
+        android:fillColor="@color/colorOnBackground"
         android:fillType="evenOdd"/>
   </group>
 </vector>
