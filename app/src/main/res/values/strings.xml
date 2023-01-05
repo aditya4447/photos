@@ -19,4 +19,9 @@
     <string name="palette">Palette</string>
     <string name="uploads">Uploads</string>
     <string name="revenue">Revenue</string>
+    <string name="palette_color_1">Palette color 1</string>
+    <string name="palette_color_2">Palette color 2</string>
+    <string name="palette_color_3">Palette color 3</string>
+    <string name="palette_color_4">Palette color 4</string>
+    <string name="palette_color_5">Palette color 5</string>
 </resources>
