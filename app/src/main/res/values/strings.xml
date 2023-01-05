@@ -10,4 +10,7 @@
     <string name="edit">Edit</string>
     <string name="edit_image">Edit image</string>
     <string name="my_dashboard">My dashboard</string>
+    <string name="followers">Followers</string>
+    <string name="artworks">Artworks</string>
+    <string name="exhibitions">Exhibitions</string>
 </resources>
