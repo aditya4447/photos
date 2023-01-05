@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorOnBackground">@color/black</color>
     <color name="selectedButtonBackground">#D90034</color>
+    <color name="image_button_action_color">#597DDF</color>
 </resources>

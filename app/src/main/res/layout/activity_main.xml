@@ -46,6 +46,7 @@
                     app:layout_constraintEnd_toStartOf="@id/ib_new"
                     app:layout_constraintTop_toTopOf="parent"
                     app:selected="@{true}" />
+<!--                Todo: add tooltip to all buttons-->
 
                 <ImageButton
                     android:id="@+id/ib_new"

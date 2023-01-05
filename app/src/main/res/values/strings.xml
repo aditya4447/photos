@@ -4,4 +4,9 @@
     <string name="open_side_navigation">Open side navigation</string>
     <string name="profile">Profile</string>
     <string name="new_">New</string>
+    <string name="upload_image">Upload image</string>
+    <string name="upload">Upload</string>
+    <string name="display_picture">Display picture</string>
+    <string name="edit">Edit</string>
+    <string name="edit_image">Edit image</string>
 </resources>
