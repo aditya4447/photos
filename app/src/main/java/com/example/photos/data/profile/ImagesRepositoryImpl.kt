@@ -1,8 +1,11 @@
 package com.example.photos.data.profile
 
 import com.example.photos.model.profile.Image
+import javax.inject.Inject
 
-class ImagesRepositoryImpl(private val remoteRepository: ImagesRemoteRepository) : ImagesRepository {
+class ImagesRepositoryImpl @Inject constructor(
+    private val remoteRepository: ImagesRemoteRepository,
+) : ImagesRepository {
 
     private var page = 0
     private var nextPageAvailable = true

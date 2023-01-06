@@ -6,7 +6,9 @@ import com.example.photos.R
 import com.example.photos.databinding.ActivityMainBinding
 import com.example.photos.ui.profile.ProfileFragment
 import com.example.photos.util.bind
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

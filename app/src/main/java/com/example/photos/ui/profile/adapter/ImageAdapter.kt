@@ -7,14 +7,12 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.photos.BR
 import com.example.photos.R
-import com.example.photos.model.profile.Image
 import com.example.photos.util.bind
 import com.example.photos.viewmodel.profile.ImagesViewModel
 
 class ImageAdapter(
     private val imagesViewModel: ImagesViewModel,
     private val owner: LifecycleOwner,
-    private val images: List<Image>
 ): Adapter<ImageAdapter.ImageHolder>() {
 
     inner class ImageHolder(private val binding: ViewDataBinding): ViewHolder(binding.root) {
@@ -25,7 +23,7 @@ class ImageAdapter(
     }
 
     override fun getItemViewType(position: Int) =
-        if (position <= images.size)
+        if (position <= imagesViewModel.images.size)
             TYPE_IMAGE
         else
             TYPE_LOADING
@@ -41,7 +39,7 @@ class ImageAdapter(
 
     override fun onBindViewHolder(holder: ImageHolder, position: Int) = holder.bind(position)
 
-    override fun getItemCount() = images.size
+    override fun getItemCount() = imagesViewModel.images.size
 
     companion object {
         const val TYPE_IMAGE = 1
