@@ -82,6 +82,4 @@ class ImagesRemoteRepositoryImplTest {
 
         }
     }
-
-    class TestException: RuntimeException()
 }
