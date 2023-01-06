@@ -12,6 +12,7 @@ import com.example.photos.R
 import com.example.photos.databinding.FragmentProfileBinding
 import com.example.photos.ui.profile.adapter.ImageAdapter
 import com.example.photos.util.bind
+import com.example.photos.util.observeEvent
 import com.example.photos.viewmodel.profile.ImagesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -34,11 +35,19 @@ class ProfileFragment : Fragment() {
             spanCount = 2
             spanSizeLookup =
                 object: SpanSizeLookup() {
-                    override fun getSpanSize(position: Int) = if (position <= 3) 2 else 1
+                    override fun getSpanSize(position: Int) =
+                        if (position < 3 || position == imagesViewModel.images.size)
+                            2
+                        else
+                            1
                 }
         }
 //        binding.rvProfile.adapter = ProfileAdapter(null)
         binding.rvProfile.adapter = ImageAdapter(imagesViewModel, viewLifecycleOwner)
+        observeEvent(imagesViewModel.imagesAddedEvent) {
+            binding.rvProfile.adapter?.notifyItemRangeInserted(
+                imagesViewModel.images.size - 2, it)
+        }
     }
 
     companion object {

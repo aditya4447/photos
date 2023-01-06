@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+        <import type="com.example.photos.util.LayoutUtilsKt" />
+        <import type="com.example.photos.viewmodel.profile.ImagesViewModel.ImageLoadingStatus" />
+        <variable
+            name="imagesViewModel"
+            type="com.example.photos.viewmodel.profile.ImagesViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -13,9 +22,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="16dp"
+            android:visibility="@{LayoutUtilsKt.visibleUnless(imagesViewModel.imageLoadingStatus == ImageLoadingStatus.ERROR)}"
+            tools:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/design_default_color_error"
+            android:textAlignment="center"
+            android:visibility="@{LayoutUtilsKt.goneUnless(imagesViewModel.imageLoadingStatus == ImageLoadingStatus.ERROR)}"
+            android:text="@{imagesViewModel.error}"
+            tools:text="The error The error The error The error The error The error The error The error The error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

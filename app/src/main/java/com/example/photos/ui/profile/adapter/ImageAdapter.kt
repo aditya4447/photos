@@ -23,7 +23,7 @@ class ImageAdapter(
     }
 
     override fun getItemViewType(position: Int) =
-        if (position <= imagesViewModel.images.size)
+        if (position < imagesViewModel.images.size)
             TYPE_IMAGE
         else
             TYPE_LOADING
@@ -37,9 +37,14 @@ class ImageAdapter(
         ).apply { lifecycleOwner = owner }
     )
 
-    override fun onBindViewHolder(holder: ImageHolder, position: Int) = holder.bind(position)
+    override fun onBindViewHolder(holder: ImageHolder, position: Int) {
+        holder.bind(position)
+        if (position == imagesViewModel.images.size) {
+            imagesViewModel.loadNextPage()
+        }
+    }
 
-    override fun getItemCount() = imagesViewModel.images.size
+    override fun getItemCount() = imagesViewModel.images.size + 1
 
     companion object {
         const val TYPE_IMAGE = 1
