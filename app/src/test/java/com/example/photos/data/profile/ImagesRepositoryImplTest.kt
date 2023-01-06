@@ -140,10 +140,24 @@ class ImagesRepositoryImplTest {
     }
 
     @Test(expected = TestException::class)
-    fun callingNextPageForFirstTime_forwardsException() {
+    fun callingNextPage_forwardsIfAnyException() {
         runBlocking {
             `when`(imagesRemoteRepository.getImages(1)).thenThrow(TestException())
             imagesRepository.getNextImagesPage()
+        }
+    }
+
+    @Test()
+    fun callingNextPageForSecondTime_callsFirstPageIfExceptionOnFirstTime() {
+        runBlocking {
+            `when`(imagesRemoteRepository.getImages(1))
+                .thenThrow(TestException())
+                .thenReturn(listOf(image1.copy(), image2.copy()))
+            try {
+                imagesRepository.getNextImagesPage()
+            } catch (ignore: TestException) {}
+            imagesRepository.getNextImagesPage()
+            verify(imagesRemoteRepository, times(2)).getImages(1)
         }
     }
 }
