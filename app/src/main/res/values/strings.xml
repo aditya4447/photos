@@ -24,4 +24,5 @@
     <string name="palette_color_3">Palette color 3</string>
     <string name="palette_color_4">Palette color 4</string>
     <string name="palette_color_5">Palette color 5</string>
+    <string name="image">Image</string>
 </resources>
