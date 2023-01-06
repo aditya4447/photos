@@ -9,7 +9,7 @@ import com.example.photos.R
 import com.example.photos.util.bind
 import com.example.photos.viewmodel.profile.ProfileViewModel
 
-class ProfileAdapter(private val viewModel: ProfileViewModel?):
+class ProfileAdapter(private val viewModel: ProfileViewModel):
     Adapter<ProfileAdapter.ProfileViewHolder>() {
     
     inner class ProfileViewHolder(private val binding: ViewDataBinding): ViewHolder(binding.root) {
